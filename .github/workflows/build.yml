@@ -33,9 +33,13 @@ jobs:
 
       - name: Install LLVM 22
         if: runner.os == 'Windows'
-        uses: KyleMayes/install-llvm-action@v2
+        uses: ZhongRuoyu/setup-llvm@v0
         with:
-          version: "22.1.3"
+          llvm-version: 22
+
+      - name: Check Clang version
+        if: runner.os == 'Windows'
+        run: clang --version
 
       - name: Build the mod
         uses: geode-sdk/build-geode-mod@main
