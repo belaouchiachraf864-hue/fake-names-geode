@@ -46,4 +46,4 @@ jobs:
         with:
           combine: true
           target: ${{ matrix.config.target }}
-          sdk: latest
+          sdk: v5.11.2
