@@ -569,7 +569,8 @@ protected:
         );
 
         float yOffset = 295.0f;
-        float xOffset = 30.0f;
+        float labelX = 10.0f;
+        float inputX = SCROLL_WIDTH / 2.0f;
 
         // Level name
         auto nameLabel = CCLabelBMFont::create(
@@ -578,7 +579,8 @@ protected:
         );
 
         nameLabel->setScale(0.5f);
-        nameLabel->setPosition(ccp(xOffset, yOffset));
+        nameLabel->setAnchorPoint(ccp(0.0f, 0.5f));
+        nameLabel->setPosition(ccp(labelX, yOffset));
         m_scrollLayer->m_contentLayer->addChild(nameLabel);
 
         m_nameInput = TextInput::create(
@@ -588,7 +590,7 @@ protected:
 
         m_nameInput->setMaxCharCount(MAX_NAME_LENGTH);
         m_nameInput->setString(current.name);
-        m_nameInput->setPosition(ccp(xOffset, yOffset - 23));
+        m_nameInput->setPosition(ccp(inputX, yOffset - 23));
         m_scrollLayer->m_contentLayer->addChild(m_nameInput);
 
         yOffset -= 50;
@@ -600,7 +602,8 @@ protected:
         );
 
         authorLabel->setScale(0.5f);
-        authorLabel->setPosition(ccp(xOffset, yOffset));
+        authorLabel->setAnchorPoint(ccp(0.0f, 0.5f));
+        authorLabel->setPosition(ccp(labelX, yOffset));
         m_scrollLayer->m_contentLayer->addChild(authorLabel);
 
         m_authorInput = TextInput::create(
@@ -610,7 +613,7 @@ protected:
 
         m_authorInput->setMaxCharCount(MAX_AUTHOR_LENGTH);
         m_authorInput->setString(current.author);
-        m_authorInput->setPosition(ccp(xOffset, yOffset - 23));
+        m_authorInput->setPosition(ccp(inputX, yOffset - 23));
         m_scrollLayer->m_contentLayer->addChild(m_authorInput);
 
         yOffset -= 50;
@@ -622,13 +625,14 @@ protected:
         );
 
         downloadsLabel->setScale(0.5f);
-        downloadsLabel->setPosition(ccp(xOffset, yOffset));
+        downloadsLabel->setAnchorPoint(ccp(0.0f, 0.5f));
+        downloadsLabel->setPosition(ccp(labelX, yOffset));
         m_scrollLayer->m_contentLayer->addChild(downloadsLabel);
 
         m_downloadsInput = TextInput::create(INPUT_WIDTH, "");
         m_downloadsInput->setMaxCharCount(MAX_DOWNLOADS_LENGTH);
         m_downloadsInput->setString(current.downloads);
-        m_downloadsInput->setPosition(ccp(xOffset, yOffset - 23));
+        m_downloadsInput->setPosition(ccp(inputX, yOffset - 23));
         m_scrollLayer->m_contentLayer->addChild(m_downloadsInput);
 
         yOffset -= 50;
@@ -640,13 +644,14 @@ protected:
         );
 
         likesLabel->setScale(0.5f);
-        likesLabel->setPosition(ccp(xOffset, yOffset));
+        likesLabel->setAnchorPoint(ccp(0.0f, 0.5f));
+        likesLabel->setPosition(ccp(labelX, yOffset));
         m_scrollLayer->m_contentLayer->addChild(likesLabel);
 
         m_likesInput = TextInput::create(INPUT_WIDTH, "");
         m_likesInput->setMaxCharCount(MAX_LIKES_LENGTH);
         m_likesInput->setString(current.likes);
-        m_likesInput->setPosition(ccp(xOffset, yOffset - 23));
+        m_likesInput->setPosition(ccp(inputX, yOffset - 23));
         m_scrollLayer->m_contentLayer->addChild(m_likesInput);
 
         yOffset -= 50;
@@ -658,13 +663,14 @@ protected:
         );
 
         listDownloadsLabel->setScale(0.5f);
-        listDownloadsLabel->setPosition(ccp(xOffset, yOffset));
+        listDownloadsLabel->setAnchorPoint(ccp(0.0f, 0.5f));
+        listDownloadsLabel->setPosition(ccp(labelX, yOffset));
         m_scrollLayer->m_contentLayer->addChild(listDownloadsLabel);
 
         m_listDownloadsInput = TextInput::create(INPUT_WIDTH, "");
         m_listDownloadsInput->setMaxCharCount(MAX_DOWNLOADS_LENGTH);
         m_listDownloadsInput->setString(current.listDownloads);
-        m_listDownloadsInput->setPosition(ccp(xOffset, yOffset - 23));
+        m_listDownloadsInput->setPosition(ccp(inputX, yOffset - 23));
         m_scrollLayer->m_contentLayer->addChild(m_listDownloadsInput);
 
         yOffset -= 50;
@@ -676,13 +682,14 @@ protected:
         );
 
         listLikesLabel->setScale(0.5f);
-        listLikesLabel->setPosition(ccp(xOffset, yOffset));
+        listLikesLabel->setAnchorPoint(ccp(0.0f, 0.5f));
+        listLikesLabel->setPosition(ccp(labelX, yOffset));
         m_scrollLayer->m_contentLayer->addChild(listLikesLabel);
 
         m_listLikesInput = TextInput::create(INPUT_WIDTH, "");
         m_listLikesInput->setMaxCharCount(MAX_LIKES_LENGTH);
         m_listLikesInput->setString(current.listLikes);
-        m_listLikesInput->setPosition(ccp(xOffset, yOffset - 23));
+        m_listLikesInput->setPosition(ccp(inputX, yOffset - 23));
         m_scrollLayer->m_contentLayer->addChild(m_listLikesInput);
 
         // Buttons remain outside the scroll area
